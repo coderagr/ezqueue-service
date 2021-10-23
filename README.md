@@ -16,9 +16,21 @@ The service arbitrarily supports a maximum of 1000 queues. This number can be ch
 Messages are held in a fifo queue in memory, while a write-ahead log stores the Enqueue events in an append-only file. If the queue daemon crashes for any reason, the queues will be restored from head to tail. 
 Further durability can be guaranteed by storing the WAL in a sepaarate HA sotrage system that has a dedicated power supply.
 
+## Uses
+While this application is not tested to be production ready, this is a high-performance fifo queue system that can used in the CI pipeline in test scenarios where an external queue is required. It does not require an elaborate setup.
+
 ## Interface
 
 The ezqueue will be compiled as a linux deamon. It supports gRPC and protocol buffers.
+
+## Version info
+
+The system has been tested on 
+
+  * Ubuntu Linux  v21.04
+  * golang 1.17
+  * protoc3
+
 
 ## Further enhancements in the making
  * TLS support between gRPC client and server
