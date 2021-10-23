@@ -17,7 +17,7 @@ Messages are held in a fifo queue in memory, while a write-ahead log stores the 
 Further durability can be guaranteed by storing the WAL in a sepaarate HA sotrage system that has a dedicated power supply.
 
 ## Uses
-While this application is not tested to be production ready, this is a high-performance fifo queue system that can used in the CI pipeline in test scenarios where an external queue is required. It does not require an elaborate setup.
+While this application is not tested to be production ready, this is a high-performance fifo queue system that can be used in the CI pipeline in test scenarios where an external queue is required. It does not require an elaborate setup.
 
 ## Interface
 
