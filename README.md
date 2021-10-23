@@ -20,7 +20,7 @@ Further durability can be guaranteed by storing the WAL in a sepaarate HA sotrag
 
 The ezqueue will be compiled as a linux deamon. It supports gRPC and protocol buffers.
 
-##Further enhancements in the making
+## Further enhancements in the making
  * TLS support between gRPC client and server
  * Delay and VisibilityTimeout implementation
  * HTTP API interface that can be used to Load Balance the input
