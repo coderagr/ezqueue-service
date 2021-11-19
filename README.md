@@ -40,3 +40,13 @@ The system has been tested on
  * Delay and VisibilityTimeout implementation
  * HTTP API interface that can be used to Load Balance the input
  * With a little further effort, this service can be converted to serve as **VERY BASIC** event store. Events can be re-played from any point in the message history.
+
+## To build a docker image 
+
+1. Build the executable file with static lib binding
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags '-s' -o ezqueueds
+
+2. Run the docker build command
+[sudo] docker build -t ezqueueds:1.0.0 .
+
+
