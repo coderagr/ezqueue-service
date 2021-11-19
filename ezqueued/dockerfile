@@ -1,0 +1,6 @@
+FROM scratch
+LABEL author=Aravindr
+LABEL version=1.0.0
+EXPOSE 8989
+COPY ./ezqueueds ./
+ENTRYPOINT [ "./ezqueueds" ]
